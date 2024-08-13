@@ -1,0 +1,150 @@
+@import "normalize";
+@import "var";
+@import "fonts";
+
+body {
+  background-color: $dark;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px 0;
+  align-items: center;
+}
+
+button{
+    cursor: pointer;
+}
+
+.vertical-divider {
+    line-height: 150%;
+    color: $grey;
+  }
+
+.header {
+  max-width: 1140px;
+  width: 100%;
+  height: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-family: $fontReg;
+  color: $grey;
+
+  &__hrefs,
+  &__contacts {
+    display: flex;
+    &__item,
+    &__phone,
+    &__mail {
+      text-decoration: none;
+      color: $grey;
+      line-height: 150%;
+      transition: $tr;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+
+  &__hrefs {
+    gap: 28px;
+  }
+  &__contacts {
+    gap: 13px;
+  }
+}
+
+section {
+  max-width: 1140px;
+  width: 100%;
+  margin-top: 62px;
+}
+
+.main__section {
+  position: relative;
+  &__title {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 120px 0;
+    color: $grey;
+    .fio {
+      margin: 0;
+      height: 42px;
+      font-size: 28px;
+      font-family: $fontReg;
+      line-height: 150%;
+    }
+    .job {
+      margin: 0;
+      height: 90px;
+      letter-spacing: 3%;
+      font-size: 74px;
+      font-family: $fontBold;
+      text-transform: uppercase;
+    }
+  }
+  &__circle {
+    position: absolute;
+    left: 0;
+    top: 375px;
+    transform: translateX(-50%);
+    width: 253px;
+    height: 253px;
+    z-index: -1;
+  }
+  &__small-circle {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 106px;
+    height: 106px;
+    z-index: -1;
+  }
+  &__triangle {
+    position: absolute;
+    top: 413px;
+    left: 0;
+    transform: translateX(-200%);
+    width: 76px;
+  }
+  &__contacts {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 42px;
+  }
+  &__discuss{
+    width: 170px;
+    padding: 0 0 10px;
+    border: none;
+    background-color: transparent;
+    color: $grey;
+    font-family: $fontBold;
+    font-size: 16px;
+    line-height: 150%;
+    border-bottom: 1px solid transparent;
+    transition: $tr;
+    &::after{
+        width: 15px;
+        content : "\2192";
+        margin-left: 15px;
+    }
+    &:hover{
+        border-color: $grey;
+    }
+}
+  &__socials{
+    display: flex;
+    gap: 24px;
+    &__item{
+        text-decoration: none;
+        color: $grey;
+        transition: $tr;
+        &:hover {
+            color: $white;
+            scale: 1.2;
+          }
+    }
+}
+}
