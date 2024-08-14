@@ -19,6 +19,11 @@ button {
   line-height: 150%;
   color: $grey;
 }
+.horizontal-divider{
+  background-color: $grey;
+  height: 1px;
+  width: 100%;
+}
 
 .header {
   max-width: 1140px;
@@ -147,28 +152,116 @@ section {
       }
     }
   }
-  &__skills{
+  &__skills {
     padding-top: 62px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 87px;
     border-top: 1px solid $white;
     height: 81px;
-    &__item{
+    &__item {
       height: 81px;
-      .skill__name{
+      .skill__name {
         color: $white;
         font-family: $fontBold;
         text-transform: uppercase;
-        margin:0 0 15px;
+        margin: 0 0 15px;
         font-size: 16px;
       }
-      .skill__title{
+      .skill__title {
         margin: 0;
         color: $grey;
         font-family: $fontReg;
         font-size: 14px;
       }
+    }
+  }
+}
+
+.title__section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 60px;
+  margin-bottom: 180px;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    .self-presentation {
+      color: $white;
+      font-size: 28px;
+      font-family: $fontBold;
+      line-height: 150%;
+      margin: 0;
+    }
+    .self-presentation-details {
+      margin: 0;
+      color: rgba($grey, 0.8);
+      font-size: 28px;
+      font-family: $fontReg;
+      max-width: 50%;
+      width: 100%;
+      line-height: 150%;
+    }
+  }
+  &__advantage {
+    display: grid;
+    gap: 70px 60px;
+    max-width: 50%;
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    &__item {
+      .advantage__name {
+        margin: 0;
+        color: $grey;
+        font-family: $fontBold;
+        line-height: 150%;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+      .advantage__title {
+        margin: 0;
+        color: rgba($grey, 0.8);
+        font-size: 14px;
+        font-family: $fontReg;
+        line-height: 150%;
+      }
+    }
+  }
+}
+
+.stages__section{
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid $grey;
+  &__item{
+    border-bottom: 1px solid $grey;
+    display: flex;
+    gap: 40px;
+    padding: 30px 0;
+    text-align: end;
+    .stage__number, .stage__name{
+      color: $grey;
+      line-height: 150%;
+      font-size: 28px;
+      font-family: $fontReg;
+      text-align: start;
+    }
+    .stage__number{
+      width: 30px;
+    }
+    .stage__name{
+      width: 30%;
+    }
+    .stage__title{
+      color : rgba($grey, 0.8);
+      line-height: 150%;
+      font-size: 16px;
+      font-family: $fontReg;
+      transform: translateY(25%);
+      flex-grow: 1;
+      padding-left: 10%;
+      text-align: start;
     }
   }
 }
