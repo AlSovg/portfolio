@@ -9,6 +9,7 @@ body {
   flex-direction: column;
   padding: 40px 0;
   align-items: center;
+  overflow-x: hidden;
 }
 
 button {
@@ -19,7 +20,7 @@ button {
   line-height: 150%;
   color: $grey;
 }
-.horizontal-divider{
+.horizontal-divider {
   background-color: $grey;
   height: 1px;
   width: 100%;
@@ -230,31 +231,32 @@ section {
   }
 }
 
-.stages__section{
+.stages__section {
   display: flex;
   flex-direction: column;
   border-top: 1px solid $grey;
-  &__item{
+  &__item {
     border-bottom: 1px solid $grey;
     display: flex;
     gap: 40px;
     padding: 30px 0;
     text-align: end;
-    .stage__number, .stage__name{
+    .stage__number,
+    .stage__name {
       color: $grey;
       line-height: 150%;
       font-size: 28px;
       font-family: $fontReg;
       text-align: start;
     }
-    .stage__number{
+    .stage__number {
       width: 30px;
     }
-    .stage__name{
+    .stage__name {
       width: 30%;
     }
-    .stage__title{
-      color : rgba($grey, 0.8);
+    .stage__title {
+      color: rgba($grey, 0.8);
       line-height: 150%;
       font-size: 16px;
       font-family: $fontReg;
@@ -262,6 +264,130 @@ section {
       flex-grow: 1;
       padding-left: 10%;
       text-align: start;
+    }
+  }
+}
+.cases__section {
+  position: relative;
+  padding-top: 90px;
+  &__heading {
+    font-size: 74px;
+    font-family: $fontBold;
+    color: $grey;
+    text-transform: uppercase;
+    height: 90px;
+    margin-bottom: 145px;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0;
+    align-items: center;
+    border-bottom: 1px solid $grey;
+    .case__content {
+      color: rgba($grey, 0.8);
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      &__name {
+        color: $grey;
+        line-height: $lh;
+        font-size: 28px;
+        font-family: $fontBold;
+      }
+      &__options {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        font-family: $fontReg;
+        &__item {
+          &::before {
+            content: "- ";
+          }
+        }
+        &__item:not(:last-child) {
+          margin-bottom: 18px;
+        }
+      }
+      &__time {
+        font-size: 16px;
+        font-family: $fontBold;
+      }
+    }
+    .case__image {
+      width: 560px;
+      height: 315px;
+    }
+  }
+
+  .linear__background {
+    background: linear-gradient(to bottom, rgba(#141416, 1), rgba(#141416, 0));
+    content: "";
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 100vw;
+    height: 70%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+  .circle__background {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    width: 465px;
+    height: 465px;
+    background-color: $red;
+    border-radius: 50%;
+  }
+}
+
+.benefits__section {
+  &__heading {
+    font-family: $fontReg;
+    font-size: 28px;
+    line-height: $lh;
+    color: $grey;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid $grey;
+  }
+  &__cases {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    align-items: center;
+    justify-items: center;
+    &__item {
+      display: flex;
+      width: 300px;
+      height: 70px;
+      align-items: center;
+      gap: 40px;
+      &__image {
+        width: 40px;
+        height: 40px;
+      }
+      &__title {
+        .case__heading {
+          color: $grey;
+          font-size: 16px;
+          font-family: $fontSem;
+          margin: 0;
+          margin-bottom: 10px;
+        }
+        .case__text{
+          line-height: $lh;
+          font-size: 14px;
+          color: rgba($grey, 0.8);
+          font-family: $fontReg;
+          margin: 0;
+        }
+      }
     }
   }
 }
