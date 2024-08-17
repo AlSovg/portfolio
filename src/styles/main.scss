@@ -395,27 +395,22 @@ section {
 .skills__section {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  border: 1px solid $grey;
+  grid-gap: 1px;
+  background-color: $grey;
   &__item {
-    width: 200px;
-    height: 80px;
+    width: -webkit-fill-available;
+    height: 100px;
+    background-color: $dark;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    border-radius: 10px;
-    transition: .3s;
-    &::after{
-      content: "";
+    &__img{
       display: block;
-      width: 200px;
-    height: 80px;
-      mask: center center / 100% no-repeat;
-      -webit-mask: center center / 100% no-repeat;
-      background-color: #7027e2;
       margin: auto;
-      transition: .3s;
-      mask-image:  url("../images/html5.svg");
-      -webkit-mask-image: url("../images/html5.svg");
+      filter: grayscale(100%);
+      transition: $tr;
+    }
+    &__img:hover{
+      filter: inherit;
     }
   }
 }
