@@ -16,6 +16,27 @@ button {
   cursor: pointer;
 }
 
+.discuss__btn {
+  width: 170px;
+  padding: 0 0 10px;
+  border: none;
+  background-color: transparent;
+  color: $grey;
+  font-family: $fontBold;
+  font-size: 16px;
+  line-height: 150%;
+  border-bottom: 1px solid transparent;
+  transition: $tr;
+  &::after {
+    width: 15px;
+    content: "\2192";
+    margin-left: 15px;
+  }
+  &:hover {
+    border-color: $grey;
+  }
+}
+
 .vertical-divider {
   line-height: 150%;
   color: $grey;
@@ -120,26 +141,7 @@ section {
     justify-content: space-between;
     margin-bottom: 42px;
   }
-  &__discuss {
-    width: 170px;
-    padding: 0 0 10px;
-    border: none;
-    background-color: transparent;
-    color: $grey;
-    font-family: $fontBold;
-    font-size: 16px;
-    line-height: 150%;
-    border-bottom: 1px solid transparent;
-    transition: $tr;
-    &::after {
-      width: 15px;
-      content: "\2192";
-      margin-left: 15px;
-    }
-    &:hover {
-      border-color: $grey;
-    }
-  }
+
   &__socials {
     display: flex;
     gap: 24px;
@@ -400,17 +402,255 @@ section {
   background-color: $grey;
   &__item {
     width: -webkit-fill-available;
-    height: 100px;
+    height: 150px;
     background-color: $dark;
     display: flex;
-    &__img{
+    &__img {
       display: block;
       margin: auto;
       filter: grayscale(100%);
       transition: $tr;
     }
-    &__img:hover{
+    &__img:hover {
       filter: inherit;
     }
+  }
+}
+.price__section {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  &__item:not(:last-child) {
+    border-bottom: 1px solid $grey;
+  }
+  &__heading {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-top: 68px;
+    padding-bottom: 80px;
+    &__title {
+      margin: 0;
+      font-family: $fontBold;
+      font-size: 28px;
+      color: $grey;
+      line-height: $lh;
+      text-transform: uppercase;
+    }
+    &__text {
+      margin: 0;
+      max-width: 50%;
+      font-family: $fontReg;
+      font-size: 28px;
+      color: rgba($grey, 0.8);
+      line-height: $lh;
+    }
+    &__img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -25%);
+      background-color: $red;
+      border-radius: 50%;
+      width: 140px;
+      height: 140px;
+      z-index: -1;
+    }
+  }
+  &__item {
+    display: flex;
+    gap: 200px;
+    padding-bottom: 50px;
+    &__heading {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      line-height: $lh;
+
+      &__title {
+        color: $grey;
+        font-size: 28px;
+        font-style: $fontReg;
+        margin: 0;
+      }
+      &__text {
+        color: rgba($grey, 0.8);
+        margin: 0;
+        font-size: 16px;
+        font-family: $fontMed;
+      }
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      &__title {
+        margin: 0;
+        font-size: 16px;
+        font-family: $fontBold;
+        color: $grey;
+      }
+      .content__list {
+        padding-left: 18px;
+        .content__item {
+          margin-left: 0;
+          line-height: 200%;
+          font-size: 16px;
+          font-family: $fontReg;
+          color: rgba($grey, 0.8);
+        }
+      }
+      &__price {
+        font-family: $fontBold;
+        font-size: 42px;
+        line-height: $lh;
+        color: $grey;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: translate(-50%, -10%);
+          width: 90px;
+          height: 90px;
+          background-color: $red;
+          border-radius: 50%;
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
+.feedback__section {
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid $grey;
+    &__title {
+      font-size: 28px;
+      font-family: $fontBold;
+      line-height: 150%;
+      text-transform: uppercase;
+      color: $grey;
+    }
+    &__text {
+      max-width: 50%;
+      font-size: 28px;
+      font-family: $fontReg;
+      line-height: 150%;
+      color: $grey;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-50%, -10%);
+      width: 328px;
+      height: 300px;
+      background-image: url(../images/feedback__background.svg);
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    gap: 20px;
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 50%;
+      width: 100%;
+    }
+    &__label {
+      font-size: 12px;
+      font-family: $fontReg;
+      line-height: 150%;
+      color: $grey;
+    }
+    &__input {
+      height: 45px;
+      background-color: rgba($grey, 0.1);
+      border: none;
+      padding: 10px 20px;
+    }
+    .feedback__btn {
+      border: none;
+      margin-top: 20px;
+      height: 65px;
+      padding: 10px;
+      text-align: center;
+      background-color: $red;
+      max-width: 50%;
+      width: 100%;
+      color: $grey;
+      font-size: 16px;
+      line-height: $lh;
+      font-family: $fontBold;
+      transition: $tr;
+      &:hover{
+        background-color: #ea0e00;
+      }
+    }
+  }
+  &__contacts {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__socials {
+    display: flex;
+    gap: 24px;
+    &__item {
+      text-decoration: none;
+      color: $grey;
+      transition: $tr;
+      line-height: 150%;
+      &:hover {
+        color: $white;
+        scale: 1.2;
+      }
+    }
+  }
+}
+
+.footer {
+  max-width: 1140px;
+  width: 100%;
+  margin-top: 130px;
+  border-top: 1px solid $grey;
+  padding-top: 60px;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(2,1fr);
+  &__hrefs,
+  &__contacts {
+    display: flex;
+    &__item,
+    &__phone,
+    &__mail {
+      text-decoration: none;
+      color: $grey;
+      line-height: 150%;
+      transition: $tr;
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+
+  &__hrefs {
+    gap: 28px;
+  }
+  &__contacts {
+    gap: 13px;
   }
 }
