@@ -3,18 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1.0, user-scalable=no">
     <title>Портфолио</title>
 </head>
 
 <body>
     <header class="header">
         <div class="header__hrefs">
-            <a href="" class="header__hrefs__item">Обо мне</a>
-            <a href="" class="header__hrefs__item">Портфолио</a>
-            <a href="" class="header__hrefs__item">Этапы работ</a>
-            <a href="" class="header__hrefs__item">Цены работ</a>
-            <a href="" class="header__hrefs__item">Обратная связь</a>
+            <a href="#about" class="header__hrefs__item">Обо мне</a>
+            <a href="#portfolio" class="header__hrefs__item">Портфолио</a>
+            <a href="#stages" class="header__hrefs__item">Этапы работ</a>
+            <a href="#prices" class="header__hrefs__item">Цены работ</a>
+            <a href="#feedback" class="header__hrefs__item">Обратная связь</a>
         </div>
         <div class="header__contacts">
             <a href="tel:+79625759429" class="header__contacts__phone">+7 962 575 94 29</a>
@@ -22,7 +22,7 @@
             <a href="mailto:sovgachev.2003@gmail.com" class="header__contacts__mail">sovgachev.2003@gmail.com</a>
         </div>
     </header>
-    <section class="main__section">
+    <section class="main__section" id="about">
         <img src="./images/main_page_background.png" alt="Web-developer">
         <img class="main__section__circle" src="./images/main_page_regular_circle.png" alt="Regular circle">
         <img class="main__section__triangle" src="./images/main_page_triangle.png" alt="Triangle">
@@ -60,7 +60,7 @@
             </div>
         </div>
     </section>
-    <section class="title__section">
+    <section class="title__section" id="portfolio">
         <div class="title__section__content">
             <h1 class="self-presentation">Обо мне</h1>
             <h1 class="self-presentation-details">Создаю только эффективные решения, которые работают на результат: от
@@ -90,7 +90,7 @@
             </div>
         </div>
     </section>
-    <section class="stages__section">
+    <section class="stages__section" id="stages">
         <div class="stages__section__item">
             <div class="stage__number">01</div>
             <div class="stage__name">Вы заказываете сайт</div>
@@ -212,7 +212,7 @@
             <img class="skills__section__item__img" src="./images/Wordpress.svg" alt="">
         </div>
     </section>
-    <section class="price__section">
+    <section class="price__section" id="prices">
 
         <div class="price__section__heading">
             <div class="price__section__heading__img"></div>
@@ -281,7 +281,7 @@
             </div>
         </div>
     </section>
-    <section class="feedback__section">
+    <section class="feedback__section" id="feedback">
         <div class="feedback__section__heading">
             <div class="feedback__section__heading__title">Расскажите<br> о своём проекте</div>
             <div class="feedback__section__heading__text">Воспользуйтесь формой обратной связи, чтобы обсудить ваш
@@ -313,16 +313,22 @@
     </section>
     <footer class="footer">
         <div class="footer__hrefs">
-            <a href="" class="header__hrefs__item">Обо мне</a>
-            <a href="" class="header__hrefs__item">Портфолио</a>
-            <a href="" class="header__hrefs__item">Этапы работ</a>
-            <a href="" class="header__hrefs__item">Цены работ</a>
-            <a href="" class="header__hrefs__item">Обратная связь</a>
+            <a href="#about" class="footer__hrefs__item">Обо мне</a>
+            <a href="#portfolio" class="footer__hrefs__item">Портфолио</a>
+            <a href="#stages" class="footer__hrefs__item">Этапы работ</a>
+            <a href="#prices" class="footer__hrefs__item">Цены работ</a>
+            <a href="#feedback" class="footer__hrefs__item">Обратная связь</a>
         </div>
         <div class="footer__contacts">
             <a href="tel:+79625759429" class="footer__contacts__phone">+7 962 575 94 29</a>
             <div class="vertical-divider">|</div>
             <a href="mailto:sovgachev.2003@gmail.com" class="footer__contacts__mail">sovgachev.2003@gmail.com</a>
+        </div>
+        <div class="footer__confidentional">
+            © 2020, Все права защищены
+        </div>
+        <div class="footer__author">
+            Сделано в рамках курса учебной платформы FrontendBlock
         </div>
     </footer>
 </body>

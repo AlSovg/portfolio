@@ -2,6 +2,10 @@
 @import "var";
 @import "fonts";
 
+html {
+  scroll-behavior: smooth !important;
+}
+
 body {
   background-color: $dark;
   display: flex;
@@ -596,7 +600,7 @@ section {
       line-height: $lh;
       font-family: $fontBold;
       transition: $tr;
-      &:hover{
+      &:hover {
         background-color: #ea0e00;
       }
     }
@@ -630,9 +634,11 @@ section {
   padding-top: 60px;
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(2,1fr);
+  gap: 40px;
+  grid-template-columns: repeat(2, 1fr);
   &__hrefs,
   &__contacts {
+    width: 100%;
     display: flex;
     &__item,
     &__phone,
@@ -651,6 +657,642 @@ section {
     gap: 28px;
   }
   &__contacts {
+    justify-content: end;
     gap: 13px;
+  }
+  &__confidentional,
+  &__author {
+    width: 100%;
+    font-size: 12px;
+    font-family: $fontReg;
+    line-height: $lh;
+    color: rgba($grey, 0.3);
+  }
+  &__confidentional {
+    text-align: start;
+  }
+  &__author {
+    text-align: end;
+  }
+}
+
+@media screen and (min-width: 350px) and (max-width: 700px) {
+  .header {
+    max-width: inherit;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    font-family: $fontReg;
+    color: $grey;
+    &__contacts {
+      font-size: 14px;
+      font-family: $fontReg;
+      display: flex;
+      &__mail {
+        display: none;
+      }
+      .vertical-divider {
+        display: none;
+      }
+    }
+    &__hrefs {
+      display: none;
+    }
+  }
+
+  section {
+    max-width: 1140px;
+    width: 100%;
+    margin-top: 62px;
+  }
+
+  .main__section {
+    position: relative;
+    &__title {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin: 120px 0;
+      color: $grey;
+      .fio {
+        margin: 0;
+        height: 42px;
+        font-size: 28px;
+        font-family: $fontReg;
+        line-height: 150%;
+      }
+      .job {
+        margin: 0;
+        height: 90px;
+        letter-spacing: 3%;
+        font-size: 74px;
+        font-family: $fontBold;
+        text-transform: uppercase;
+      }
+    }
+    &__circle {
+      position: absolute;
+      left: 0;
+      top: 375px;
+      transform: translateX(-50%);
+      width: 253px;
+      height: 253px;
+      z-index: -1;
+    }
+    &__small-circle {
+      position: absolute;
+      right: 0;
+      bottom: 152px;
+      transform: translateX(-50%);
+      width: 106px;
+      height: 106px;
+      z-index: -1;
+    }
+    &__triangle {
+      position: absolute;
+      top: 413px;
+      left: 0;
+      transform: translateX(-200%);
+      width: 76px;
+    }
+    &__contacts {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 42px;
+    }
+
+    &__socials {
+      display: flex;
+      gap: 24px;
+      &__item {
+        text-decoration: none;
+        color: $grey;
+        transition: $tr;
+        &:hover {
+          color: $white;
+          scale: 1.2;
+        }
+      }
+    }
+    &__skills {
+      padding-top: 62px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 87px;
+      border-top: 1px solid $white;
+      height: 81px;
+      &__item {
+        height: 81px;
+        .skill__name {
+          color: $white;
+          font-family: $fontBold;
+          text-transform: uppercase;
+          margin: 0 0 15px;
+          font-size: 16px;
+        }
+        .skill__title {
+          margin: 0;
+          color: $grey;
+          font-family: $fontReg;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .title__section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 60px;
+    margin-bottom: 180px;
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      .self-presentation {
+        color: $white;
+        font-size: 28px;
+        font-family: $fontBold;
+        line-height: 150%;
+        margin: 0;
+      }
+      .self-presentation-details {
+        margin: 0;
+        color: rgba($grey, 0.8);
+        font-size: 28px;
+        font-family: $fontReg;
+        max-width: 50%;
+        width: 100%;
+        line-height: 150%;
+      }
+    }
+    &__advantage {
+      display: grid;
+      gap: 70px 60px;
+      max-width: 50%;
+      width: 100%;
+      grid-template-columns: repeat(2, 1fr);
+      &__item {
+        .advantage__name {
+          margin: 0;
+          color: $grey;
+          font-family: $fontBold;
+          line-height: 150%;
+          font-size: 16px;
+          margin-bottom: 20px;
+        }
+        .advantage__title {
+          margin: 0;
+          color: rgba($grey, 0.8);
+          font-size: 14px;
+          font-family: $fontReg;
+          line-height: 150%;
+        }
+      }
+    }
+  }
+
+  .stages__section {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid $grey;
+    &__item {
+      border-bottom: 1px solid $grey;
+      display: flex;
+      gap: 40px;
+      padding: 30px 0;
+      text-align: end;
+      .stage__number,
+      .stage__name {
+        color: $grey;
+        line-height: 150%;
+        font-size: 28px;
+        font-family: $fontReg;
+        text-align: start;
+      }
+      .stage__number {
+        width: 30px;
+      }
+      .stage__name {
+        width: 30%;
+      }
+      .stage__title {
+        color: rgba($grey, 0.8);
+        line-height: 150%;
+        font-size: 16px;
+        font-family: $fontReg;
+        transform: translateY(25%);
+        flex-grow: 1;
+        padding-left: 10%;
+        text-align: start;
+      }
+    }
+  }
+  .cases__section {
+    position: relative;
+    padding-top: 90px;
+    &__heading {
+      font-size: 74px;
+      font-family: $fontBold;
+      color: $grey;
+      text-transform: uppercase;
+      height: 90px;
+      margin-bottom: 145px;
+    }
+
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      padding: 60px 0;
+      align-items: center;
+      border-bottom: 1px solid $grey;
+      .case__content {
+        color: rgba($grey, 0.8);
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        &__name {
+          color: $grey;
+          line-height: $lh;
+          font-size: 28px;
+          font-family: $fontBold;
+        }
+        &__options {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          font-size: 16px;
+          font-family: $fontReg;
+          &__item {
+            &::before {
+              content: "- ";
+            }
+          }
+          &__item:not(:last-child) {
+            margin-bottom: 18px;
+          }
+        }
+        &__time {
+          font-size: 16px;
+          font-family: $fontBold;
+        }
+      }
+      .case__image {
+        width: 560px;
+        height: 315px;
+      }
+    }
+
+    .linear__background {
+      background: linear-gradient(
+        to bottom,
+        rgba(#141416, 1),
+        rgba(#141416, 0)
+      );
+      content: "";
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      width: 100vw;
+      height: 70%;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+    .circle__background {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+      width: 465px;
+      height: 465px;
+      background-color: $red;
+      border-radius: 50%;
+    }
+  }
+
+  .benefits__section {
+    &__heading {
+      font-family: $fontReg;
+      font-size: 28px;
+      line-height: $lh;
+      color: $grey;
+      padding-bottom: 60px;
+      margin-bottom: 60px;
+      border-bottom: 1px solid $grey;
+    }
+    &__cases {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 60px;
+      align-items: center;
+      justify-items: center;
+      &__item {
+        display: flex;
+        width: 300px;
+        height: 70px;
+        align-items: center;
+        gap: 40px;
+        &__image {
+          width: 40px;
+          height: 40px;
+        }
+        &__title {
+          .case__heading {
+            color: $grey;
+            font-size: 16px;
+            font-family: $fontSem;
+            margin: 0;
+            margin-bottom: 10px;
+          }
+          .case__text {
+            line-height: $lh;
+            font-size: 14px;
+            color: rgba($grey, 0.8);
+            font-family: $fontReg;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .skills__section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid $grey;
+    grid-gap: 1px;
+    background-color: $grey;
+    &__item {
+      width: -webkit-fill-available;
+      height: 150px;
+      background-color: $dark;
+      display: flex;
+      &__img {
+        display: block;
+        margin: auto;
+        filter: grayscale(100%);
+        transition: $tr;
+      }
+      &__img:hover {
+        filter: inherit;
+      }
+    }
+  }
+  .price__section {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    &__item:not(:last-child) {
+      border-bottom: 1px solid $grey;
+    }
+    &__heading {
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+      margin-top: 68px;
+      padding-bottom: 80px;
+      &__title {
+        margin: 0;
+        font-family: $fontBold;
+        font-size: 28px;
+        color: $grey;
+        line-height: $lh;
+        text-transform: uppercase;
+      }
+      &__text {
+        margin: 0;
+        max-width: 50%;
+        font-family: $fontReg;
+        font-size: 28px;
+        color: rgba($grey, 0.8);
+        line-height: $lh;
+      }
+      &__img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -25%);
+        background-color: $red;
+        border-radius: 50%;
+        width: 140px;
+        height: 140px;
+        z-index: -1;
+      }
+    }
+    &__item {
+      display: flex;
+      gap: 200px;
+      padding-bottom: 50px;
+      &__heading {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        line-height: $lh;
+
+        &__title {
+          color: $grey;
+          font-size: 28px;
+          font-style: $fontReg;
+          margin: 0;
+        }
+        &__text {
+          color: rgba($grey, 0.8);
+          margin: 0;
+          font-size: 16px;
+          font-family: $fontMed;
+        }
+      }
+      &__content {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        &__title {
+          margin: 0;
+          font-size: 16px;
+          font-family: $fontBold;
+          color: $grey;
+        }
+        .content__list {
+          padding-left: 18px;
+          .content__item {
+            margin-left: 0;
+            line-height: 200%;
+            font-size: 16px;
+            font-family: $fontReg;
+            color: rgba($grey, 0.8);
+          }
+        }
+        &__price {
+          font-family: $fontBold;
+          font-size: 42px;
+          line-height: $lh;
+          color: $grey;
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -10%);
+            width: 90px;
+            height: 90px;
+            background-color: $red;
+            border-radius: 50%;
+            z-index: -1;
+          }
+        }
+      }
+    }
+  }
+  .feedback__section {
+    &__heading {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      padding-bottom: 60px;
+      margin-bottom: 60px;
+      border-bottom: 1px solid $grey;
+      &__title {
+        font-size: 28px;
+        font-family: $fontBold;
+        line-height: 150%;
+        text-transform: uppercase;
+        color: $grey;
+      }
+      &__text {
+        max-width: 50%;
+        font-size: 28px;
+        font-family: $fontReg;
+        line-height: 150%;
+        color: $grey;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -10%);
+        width: 328px;
+        height: 300px;
+        background-image: url(../images/feedback__background.svg);
+        background-repeat: no-repeat;
+        z-index: -1;
+      }
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      justify-content: end;
+      gap: 20px;
+      &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        max-width: 50%;
+        width: 100%;
+      }
+      &__label {
+        font-size: 12px;
+        font-family: $fontReg;
+        line-height: 150%;
+        color: $grey;
+      }
+      &__input {
+        height: 45px;
+        background-color: rgba($grey, 0.1);
+        border: none;
+        padding: 10px 20px;
+      }
+      .feedback__btn {
+        border: none;
+        margin-top: 20px;
+        height: 65px;
+        padding: 10px;
+        text-align: center;
+        background-color: $red;
+        max-width: 50%;
+        width: 100%;
+        color: $grey;
+        font-size: 16px;
+        line-height: $lh;
+        font-family: $fontBold;
+        transition: $tr;
+        &:hover {
+          background-color: #ea0e00;
+        }
+      }
+    }
+    &__contacts {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__socials {
+      display: flex;
+      gap: 24px;
+      &__item {
+        text-decoration: none;
+        color: $grey;
+        transition: $tr;
+        line-height: 150%;
+        &:hover {
+          color: $white;
+          scale: 1.2;
+        }
+      }
+    }
+  }
+
+  .footer {
+    max-width: 1140px;
+    width: 100%;
+    margin-top: 130px;
+    border-top: 1px solid $grey;
+    padding-top: 60px;
+    display: grid;
+    justify-items: center;
+    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    &__hrefs,
+    &__contacts {
+      width: 100%;
+      display: flex;
+      &__item,
+      &__phone,
+      &__mail {
+        text-decoration: none;
+        color: $grey;
+        line-height: 150%;
+        transition: $tr;
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+
+    &__hrefs {
+      gap: 28px;
+    }
+    &__contacts {
+      justify-content: end;
+      gap: 13px;
+    }
+    &__confidentional,
+    &__author {
+      width: 100%;
+      font-size: 12px;
+      font-family: $fontReg;
+      line-height: $lh;
+      color: rgba($grey, 0.3);
+    }
+    &__confidentional {
+      text-align: start;
+    }
+    &__author {
+      text-align: end;
+    }
   }
 }
