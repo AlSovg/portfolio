@@ -34,29 +34,29 @@
         <div class="main__section__contacts">
             <button class="discuss__btn">Обсудить проект</button>
             <div class="main__section__socials">
-                <a href="" class="main__section__socials__item">Facebook</a>
+                <a href="https://t.me/Alexis345" target="_blank" class="main__section__socials__item">Telegram</a>
                 <div class="vertical-divider">|</div>
-                <a href="" class="main__section__socials__item">Facebook</a>
+                <a href="https://wa.me/+79625759429" target="_blank" class="main__section__socials__item">WhatsApp</a>
                 <div class="vertical-divider">|</div>
-                <a href="" class="main__section__socials__item">Facebook</a>
+                <a href="https://github.com/AlSovg" target="_blank" class="main__section__socials__item">Github</a>
             </div>
         </div>
         <div class="main__section__skills">
             <div class="main__section__skills__item">
-                <h2 class="skill__name">Frontend</h2>
-                <h3 class="skill__title">HTML+CSS+JS кодирование дизайнов любой сложности"</h3>
+                <h2 class="skill__name">Верстка сайта</h2>
+                <h3 class="skill__title">HTML+CSS+JS кодирование дизайнов любой сложности</h3>
             </div>
             <div class="main__section__skills__item">
                 <h2 class="skill__name">Frontend</h2>
-                <h3 class="skill__title">HTML+CSS+JS кодирование дизайнов любой сложности"</h3>
+                <h3 class="skill__title">Разработка приложений на Node JS или ASP.NET</h3>
             </div>
             <div class="main__section__skills__item">
-                <h2 class="skill__name">Frontend</h2>
-                <h3 class="skill__title">HTML+CSS+JS кодирование дизайнов любой сложности"</h3>
+                <h2 class="skill__name">Backend</h2>
+                <h3 class="skill__title">Разработка back-end логики для готового front-end</h3>
             </div>
             <div class="main__section__skills__item">
-                <h2 class="skill__name">Frontend</h2>
-                <h3 class="skill__title">HTML+CSS+JS кодирование дизайнов любой сложности"</h3>
+                <h2 class="skill__name">SEO продвижение</h2>
+                <h3 class="skill__title">Качественное улучшение позиций сайта в поисковой выдаче</h3>
             </div>
         </div>
     </section>
@@ -92,18 +92,15 @@
     </section>
     <section class="stages__section" id="stages">
         <div class="stages__section__item">
-            <div class="stage__number">01</div>
-            <div class="stage__name">Вы заказываете сайт</div>
+            <div class="stage__name">01 Вы заказываете сайт</div>
             <div class="stage__title">Связываетесь со мной по телефону или через заявку на сайте</div>
         </div>
         <div class="stages__section__item">
-            <div class="stage__number">02</div>
-            <div class="stage__name">Обговариваем детали</div>
+            <div class="stage__name">02 Обговариваем детали</div>
             <div class="stage__title">Созваниваемся или списываемся любым удобным для вас способом</div>
         </div>
         <div class="stages__section__item">
-            <div class="stage__number">03</div>
-            <div class="stage__name">Этап программирования</div>
+            <div class="stage__name">03 Этап программирования</div>
             <div class="stage__title">Верстаю сайт по вашему проекту пиксель в пиксель</div>
         </div>
     </section>
@@ -287,27 +284,40 @@
             <div class="feedback__section__heading__text">Воспользуйтесь формой обратной связи, чтобы обсудить ваш
                 проект,заполните все поля, и я свяжусь с вами в ближайшее время</div>
         </div>
-        <div class="feedback__section__content">
+        <form class="feedback__section__content" action="https://formspree.io/f/xqazyygb" method="POST">
             <div class="feedback__section__content__container">
-                <div class="feedback__section__content__label">Телефон или email</div>
-                <input class="feedback__section__content__input" />
+                <label class="feedback__section__content__label">
+                    Телефон или email
+                </label>
+                <input required class="feedback__section__content__input" type="text" name="email">
             </div>
-
-
             <div class="feedback__section__content__container">
-                <div class="feedback__section__content__label">Выберите удобный способ связи</div>
-                <input class="feedback__section__content__input" placeholder="Telegram" />
+                <label class="feedback__section__content__label">
+                    Предпочитаемый способ связи
+                </label>
+                <select class="feedback__section__content__select" name="message">
+                    <option class="feedback__section__content__option" value="Telegram" selected>Telegram</option>
+                    <option class="feedback__section__content__option" value="WhatsApp">WhatsApp</option>
+                    <option class="feedback__section__content__option" value="Email">Email</option>
+                    <option class="feedback__section__content__option" value="Tenhunter">Tenhunter</option>
+                </select>
             </div>
+            <div class="feedback__section__content__container">
+                <label class="feedback__section__content__label">
+                    Ваш контакт в выбранном формате
 
-            <button class="feedback__btn">Отправить</button>
-        </div>
+                </label>
+                <input required class="feedback__section__content__input" type="text" name="contact">
+            </div>
+            <button type="submit" class="feedback__btn">Отправить</button>
+        </form>
         <div class="feedback__section__contacts">
             <div class="feedback__section__socials">
-                <a href="" class="feedback__section__socials__item">Facebook</a>
+                <a href="https://t.me/Alexis345" target="_blank" class="feedback__section__socials__item">Telegram</a>
                 <div class="vertical-divider">|</div>
-                <a href="" class="feedback__section__socials__item">Facebook</a>
+                <a href="https://wa.me/+79625759429" target="_blank" class="feedback__section__socials__item">WhatsApp</a>
                 <div class="vertical-divider">|</div>
-                <a href="" class="feedback__section__socials__item">Facebook</a>
+                <a href="https://github.com/AlSovg" target="_blank" class="feedback__section__socials__item">Github</a>
             </div>
         </div>
     </section>

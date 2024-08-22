@@ -259,16 +259,16 @@ section {
       width: 30px;
     }
     .stage__name {
-      width: 30%;
+      width: 50%;
     }
     .stage__title {
       color: rgba($grey, 0.8);
       line-height: 150%;
       font-size: 16px;
       font-family: $fontReg;
-      transform: translateY(25%);
+      transform: translateY(20%);
       flex-grow: 1;
-      padding-left: 10%;
+      width: 50%;
       text-align: start;
     }
   }
@@ -585,6 +585,24 @@ section {
       background-color: rgba($grey, 0.1);
       border: none;
       padding: 10px 20px;
+      color: $grey;
+    }
+    &__select {
+      height: 45px;
+      background-color: rgba($grey, 0.1);
+      border: none;
+      padding: 10px 20px;
+      color: $grey;
+      & *.feedback__section__content__option {
+        background-color: $dark;
+      }
+    }
+    &__option {
+      height: 45px;
+      background-color: rgba($grey, 0.1);
+      border: none;
+      padding: 10px 20px;
+      color: $grey;
     }
     .feedback__btn {
       border: none;
@@ -900,7 +918,7 @@ section {
         line-height: 150%;
         font-size: 12px;
         font-family: $fontReg;
-        transform: translateY(25%);
+        transform: translateY(15%);
         flex-grow: 1;
         padding-left: 10%;
         text-align: start;
