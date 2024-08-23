@@ -50,308 +50,6 @@ button {
   height: 1px;
   width: 100%;
 }
-@media screen and (min-width: 720px) {
-  .header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    &__container {
-      max-width: 1140px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-
-    &__hrefs,
-    &__contacts {
-      display: flex;
-      &__item,
-      &__phone,
-      &__mail {
-        text-decoration: none;
-        color: $grey;
-        line-height: 150%;
-        transition: $tr;
-        &:hover {
-          color: $red;
-        }
-      }
-    }
-    &__hrefs {
-      gap: 28px;
-    }
-    &__contacts {
-      gap: 13px;
-    }
-  }
-  section {
-    max-width: 1140px;
-    margin-top: 62px;
-  }
-  .main__section {
-    &__title {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      margin: 120px 0;
-      color: $grey;
-      .fio {
-        height: 42px;
-        font-size: 28px;
-      }
-      .job {
-        height: 90px;
-        letter-spacing: 3%;
-        font-size: 74px;
-      }
-    }
-    &__circle {
-      position: absolute;
-      left: 0;
-      top: 375px;
-      transform: translateX(-50%);
-      width: 253px;
-      height: 253px;
-      z-index: -1;
-    }
-    &__small-circle {
-      position: absolute;
-      right: 0;
-      bottom: 152px;
-      transform: translateX(-50%);
-      width: 106px;
-      height: 106px;
-      z-index: -1;
-    }
-    &__triangle {
-      position: absolute;
-      top: 413px;
-      left: 0;
-      transform: translateX(-200%);
-      width: 76px;
-    }
-    &__contacts {
-      margin-bottom: 42px;
-    }
-    &__socials {
-      gap: 24px;
-    }
-    &__skills {
-      grid-template-columns: repeat(4, 1fr);
-      gap: 87px;
-      height: 81px;
-      &__item {
-        height: 81px;
-        .skill__name {
-          font-size: 16px;
-        }
-        .skill__title {
-          font-size: 14px;
-        }
-      }
-    }
-  }
-  .title__section {
-    gap: 60px;
-    margin-bottom: 180px;
-    &__content {
-      .self-presentation-details {
-        max-width: 50%;
-      }
-    }
-    &__advantage {
-      display: grid;
-      gap: 70px 60px;
-      max-width: 50%;
-      width: 100%;
-      grid-template-columns: repeat(2, 1fr);
-      &__item {
-        .advantage__name {
-          margin: 0;
-          color: $grey;
-          font-family: $fontBold;
-          line-height: 150%;
-          font-size: 16px;
-          margin-bottom: 20px;
-        }
-        .advantage__title {
-          margin: 0;
-          color: rgba($grey, 0.8);
-          font-size: 14px;
-          font-family: $fontReg;
-          line-height: 150%;
-        }
-      }
-    }
-  }
-  .stages__section {
-    &__item {
-      .stage__number,
-      .stage__name {
-        color: $grey;
-        line-height: 150%;
-        font-size: 28px;
-        font-family: $fontReg;
-        text-align: start;
-      }
-      .stage__number {
-        width: 30px;
-      }
-      .stage__name {
-        width: 50%;
-      }
-      .stage__title {
-        font-size: 16px;
-        transform: translateY(20%);
-      }
-    }
-  }
-
-  .cases__section {
-    padding-top: 90px;
-    &__heading {
-      font-size: 74px;
-      height: 90px;
-      margin-bottom: 145px;
-    }
-
-    &__item {
-      padding: 60px 0;
-      align-items: center;
-      .case__content {
-        gap: 40px;
-        &__name {
-          font-size: 28px;
-        }
-        &__options {
-          font-size: 16px;
-        }
-        &__time {
-          font-size: 16px;
-        }
-      }
-      .case__image {
-        width: 560px;
-        height: 315px;
-      }
-    }
-    .circle__background {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: -1;
-      width: 465px;
-      height: 465px;
-      background-color: $red;
-      border-radius: 50%;
-    }
-  }
-  .benefits__section {
-    &__heading {
-      font-size: 28px;
-    }
-    &__cases {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-
-  .skills__section {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  .price__section {
-    gap: 60px;
-    &__heading {
-      padding-bottom: 80px;
-      &__title {
-        font-size: 28px;
-      }
-      &__text {
-        max-width: 50%;
-        font-size: 28px;
-      }
-    }
-    &__item {
-      gap: 200px;
-      padding-bottom: 50px;
-      &__heading {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        line-height: $lh;
-
-        &__title {
-          font-size: 28px;
-        }
-        &__text {
-          font-size: 16px;
-        }
-      }
-      &__content {
-        &__title {
-          font-size: 16px;
-        }
-        .content__list {
-          .content__item {
-            font-size: 16px;
-          }
-        }
-        &__price {
-          font-size: 42px;
-          &::after {
-            width: 90px;
-            height: 90px;
-          }
-        }
-      }
-    }
-  }
-  .feedback__section {
-    &__heading {
-      &__title {
-        font-size: 28px;
-      }
-      &__text {
-        max-width: 50%;
-        font-size: 28px;
-      }
-    }
-    &__content {
-      &__container {
-        max-width: 50%;
-      }
-      .feedback__btn {
-        margin-top: 20px;
-        height: 65px;
-        padding: 10px;
-        max-width: 50%;
-        font-size: 16px;
-      }
-    }
-  }
-
-  .footer {
-    gap: 40px;
-    grid-template-columns: repeat(2, 1fr);
-    &__hrefs {
-      gap: 28px;
-    }
-    &__contacts {
-      justify-content: end;
-      gap: 13px;
-    }
-    &__confidentional,
-    &__author {
-      font-size: 12px;
-    }
-    &__confidentional {
-      text-align: start;
-    }
-    &__author {
-      text-align: end;
-    }
-  }
-}
 
 .header {
   z-index: 1;
@@ -388,6 +86,8 @@ section {
 .main__section {
   position: relative;
   &__title {
+    display: flex;
+    flex-direction: column;
     color: $grey;
     .fio {
       margin: 0;
@@ -461,8 +161,22 @@ section {
     }
   }
   &__advantage {
-    gap: 70px 60px;
-    max-width: 50%;
+    display: grid;
+    .advantage__name {
+      margin: 0;
+      color: $grey;
+      font-family: $fontBold;
+      line-height: 150%;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .advantage__title {
+      margin: 0;
+      color: rgba($grey, 0.8);
+      font-family: $fontReg;
+      line-height: 150%;
+      font-size: 14px;
+    }
   }
 }
 
@@ -479,7 +193,6 @@ section {
     .stage__name {
       color: $grey;
       line-height: 150%;
-      font-size: 28px;
       font-family: $fontReg;
       text-align: start;
     }
@@ -495,6 +208,8 @@ section {
 }
 .cases__section {
   position: relative;
+  
+  padding-top: 90px;
   &__heading {
     font-family: $fontBold;
     color: $grey;
@@ -650,6 +365,10 @@ section {
   &__item {
     display: flex;
     &__heading {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
       &__title {
         color: $grey;
         font-family: $fontReg;
@@ -840,6 +559,273 @@ section {
   }
 }
 
+@media screen and (min-width: 720px) {
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    &__container {
+      max-width: 1140px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    &__hrefs,
+    &__contacts {
+      display: flex;
+      &__item,
+      &__phone,
+      &__mail {
+        text-decoration: none;
+        color: $grey;
+        line-height: 150%;
+        transition: $tr;
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+    &__hrefs {
+      gap: 28px;
+    }
+    &__contacts {
+      gap: 13px;
+    }
+  }
+  section {
+    max-width: 1140px;
+    margin-top: 62px;
+  }
+  .main__section {
+    &__title {
+      gap: 30px;
+      margin: 120px 0;
+      color: $grey;
+      .fio {
+        height: 42px;
+        font-size: 28px;
+      }
+      .job {
+        height: 90px;
+        font-size: 74px;
+      }
+    }
+    &__circle {
+      position: absolute;
+      left: 0;
+      top: 375px;
+      transform: translateX(-50%);
+      width: 253px;
+      height: 253px;
+      z-index: -1;
+    }
+    &__small-circle {
+      position: absolute;
+      right: 0;
+      bottom: 152px;
+      transform: translateX(-50%);
+      width: 106px;
+      height: 106px;
+      z-index: -1;
+    }
+    &__triangle {
+      position: absolute;
+      top: 413px;
+      left: 0;
+      transform: translateX(-200%);
+      width: 76px;
+    }
+    &__contacts {
+      margin-bottom: 42px;
+    }
+    &__socials {
+      gap: 24px;
+    }
+    &__skills {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 87px;
+      height: 81px;
+      &__item {
+        height: 81px;
+        .skill__name {
+          font-size: 16px;
+        }
+        .skill__title {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .title__section {
+    gap: 60px;
+    margin-bottom: 180px;
+    &__content {
+      .self-presentation-details {
+        max-width: 50%;
+      }
+    }
+    &__advantage {
+      width: 100%;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  .stages__section {
+    &__item {
+      .stage__number,
+      .stage__name {
+        font-size: 28px;
+      }
+      .stage__name {
+        width: 50%;
+      }
+      .stage__title {
+        font-size: 16px;
+        transform: translateY(20%);
+      }
+    }
+  }
+
+  .cases__section {
+    &__heading {
+      font-size: 74px;
+      height: 90px;
+      margin-bottom: 145px;
+    }
+
+    &__item {
+      padding: 60px 0;
+      align-items: center;
+      .case__content {
+        gap: 40px;
+        &__name {
+          font-size: 28px;
+        }
+        &__options {
+          font-size: 16px;
+        }
+        &__time {
+          font-size: 16px;
+        }
+      }
+      .case__image {
+        width: 560px;
+        height: 315px;
+      }
+    }
+    .circle__background {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+      width: 465px;
+      height: 465px;
+      background-color: $red;
+      border-radius: 50%;
+    }
+  }
+  .benefits__section {
+    &__heading {
+      font-size: 28px;
+    }
+    &__cases {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .skills__section {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .price__section {
+    gap: 60px;
+    &__heading {
+      padding-bottom: 80px;
+      &__title {
+        font-size: 28px;
+      }
+      &__text {
+        max-width: 50%;
+        font-size: 28px;
+      }
+    }
+    &__item {
+      gap: 200px;
+      padding-bottom: 50px;
+      &__heading {
+        &__title {
+          font-size: 28px;
+        }
+        &__text {
+          font-size: 16px;
+        }
+      }
+      &__content {
+        &__title {
+          font-size: 16px;
+        }
+        .content__list {
+          .content__item {
+            font-size: 16px;
+          }
+        }
+        &__price {
+          font-size: 42px;
+          &::after {
+            width: 90px;
+            height: 90px;
+          }
+        }
+      }
+    }
+  }
+  .feedback__section {
+    &__heading {
+      &__title {
+        font-size: 28px;
+      }
+      &__text {
+        max-width: 50%;
+        font-size: 28px;
+      }
+    }
+    &__content {
+      &__container {
+        max-width: 50%;
+      }
+      .feedback__btn {
+        margin-top: 20px;
+        height: 65px;
+        padding: 10px;
+        max-width: 50%;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .footer {
+    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    &__hrefs {
+      gap: 28px;
+    }
+    &__contacts {
+      justify-content: end;
+      gap: 13px;
+    }
+    &__confidentional,
+    &__author {
+      font-size: 12px;
+    }
+    &__confidentional {
+      text-align: start;
+    }
+    &__author {
+      text-align: end;
+    }
+  }
+}
+
 @media screen and (min-width: 350px) and (max-width: 700px) {
   .discuss__btn {
     font-size: 12px;
@@ -853,13 +839,6 @@ section {
     padding: 10px;
   }
   .header {
-    max-width: inherit;
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-between;
-    font-family: $fontReg;
-    color: $grey;
     &__contacts {
       font-size: 14px;
       font-family: $fontReg;
@@ -883,31 +862,20 @@ section {
   }
 
   .main__section {
-    position: relative;
     &__img {
       height: 215px;
       transform: translate(-28%, 0%);
     }
     &__title {
-      display: flex;
-      flex-direction: column;
       gap: 20px;
       margin: 60px 0;
-      color: $grey;
       .fio {
-        margin: 0;
         height: 42px;
         font-size: 18px;
-        font-family: $fontReg;
-        line-height: 150%;
       }
       .job {
-        margin: 0;
         height: 90px;
-        letter-spacing: 3%;
         font-size: 28px;
-        font-family: $fontBold;
-        text-transform: uppercase;
       }
     }
     &__circle {
@@ -936,46 +904,22 @@ section {
       width: 33px;
     }
     &__contacts {
-      display: flex;
-      justify-content: space-between;
       margin-bottom: 0px;
     }
 
     &__socials {
-      display: flex;
       gap: 10px;
-      &__item {
-        text-decoration: none;
-        color: $grey;
-        transition: $tr;
-        font-size: 12px;
-        line-height: 150%;
-        &:hover {
-          color: $white;
-          scale: 1.2;
-        }
-      }
     }
     &__skills {
-      padding-top: 62px;
-      display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 30px;
-      border-top: 1px solid $white;
       height: auto;
       &__item {
         height: 63px;
         .skill__name {
-          color: $white;
-          font-family: $fontBold;
-          text-transform: uppercase;
-          margin: 0 0 15px;
           font-size: 12px;
         }
         .skill__title {
-          margin: 0;
-          color: $grey;
-          font-family: $fontReg;
           font-size: 12px;
         }
       }
@@ -983,142 +927,60 @@ section {
   }
 
   .title__section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
     gap: 40px;
     margin-bottom: 60px;
     &__content {
-      display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      .self-presentation {
-        color: $white;
-        font-size: 28px;
-        font-family: $fontBold;
-        line-height: 150%;
-        margin: 0;
-      }
       .self-presentation-details {
-        margin: 0;
-        color: rgba($grey, 0.8);
-        font-size: 28px;
-        font-family: $fontReg;
         max-width: inherit;
-        width: 100%;
-        line-height: 150%;
       }
     }
     &__advantage {
-      display: grid;
       gap: 25px 30px;
       max-width: inherit;
-      width: 100%;
       grid-template-columns: repeat(2, 1fr);
-      &__item {
-        .advantage__name {
-          margin: 0;
-          color: $grey;
-          font-family: $fontBold;
-          line-height: 150%;
-          font-size: 16px;
-          margin-bottom: 20px;
-        }
-        .advantage__title {
-          margin: 0;
-          color: rgba($grey, 0.8);
-          font-size: 14px;
-          font-family: $fontReg;
-          line-height: 150%;
-        }
-      }
+      
     }
   }
 
   .stages__section {
-    display: flex;
-    flex-direction: column;
-    border-top: 1px solid $grey;
     &__item {
-      border-bottom: 1px solid $grey;
-      display: flex;
-      gap: 40px;
-      padding: 30px 0;
-      text-align: end;
       .stage__number,
       .stage__name {
-        color: $grey;
-        line-height: 150%;
         font-size: 16px;
-        font-family: $fontReg;
-        text-align: start;
-      }
-      .stage__number {
-        width: 30px;
       }
       .stage__name {
         width: 30%;
       }
       .stage__title {
-        color: rgba($grey, 0.8);
-        line-height: 150%;
         font-size: 12px;
-        font-family: $fontReg;
         transform: translateY(15%);
-        flex-grow: 1;
         padding-left: 10%;
-        text-align: start;
       }
     }
   }
   .cases__section {
-    position: relative;
-    padding-top: 90px;
     &__heading {
       font-size: 28px;
-      font-family: $fontBold;
-      color: $grey;
-      text-transform: uppercase;
       height: 50px;
       margin-bottom: 5px;
     }
 
     &__item {
-      display: flex;
       flex-direction: column;
-      justify-content: space-between;
       padding: 40px 0;
       align-items: start;
-      border-bottom: 1px solid $grey;
       .case__content {
-        color: rgba($grey, 0.8);
-        display: flex;
         flex-direction: column;
         gap: 20px;
         &__name {
-          color: $grey;
-          line-height: $lh;
           font-size: 16px;
-          font-family: $fontBold;
         }
         &__options {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
           font-size: 12px;
-          font-family: $fontReg;
-          &__item {
-            &::before {
-              content: "- ";
-            }
-          }
-          &__item:not(:last-child) {
-            margin-bottom: 18px;
-          }
         }
         &__time {
           font-size: 12px;
-          font-family: $fontBold;
         }
       }
       .case__image {
@@ -1126,22 +988,6 @@ section {
         height: auto;
         margin-top: 30px;
       }
-    }
-
-    .linear__background {
-      background: linear-gradient(
-        to bottom,
-        rgba(#141416, 1),
-        rgba(#141416, 0)
-      );
-      content: "";
-      position: absolute;
-      top: 30%;
-      left: 50%;
-      width: 100vw;
-      height: 70%;
-      transform: translateX(-50%);
-      z-index: -1;
     }
     .circle__background {
       position: absolute;
@@ -1158,88 +1004,23 @@ section {
 
   .benefits__section {
     &__heading {
-      font-family: $fontReg;
       font-size: 16px;
-      line-height: $lh;
-      color: $grey;
-      padding-bottom: 60px;
-      margin-bottom: 60px;
-      border-bottom: 1px solid $grey;
     }
     &__cases {
-      display: grid;
       grid-template-columns: repeat(1, 1fr);
-      gap: 60px;
-      align-items: center;
-      justify-items: center;
-      &__item {
-        display: flex;
-        width: 300px;
-        height: 70px;
-        align-items: center;
-        gap: 40px;
-        &__image {
-          width: 40px;
-          height: 40px;
-        }
-        &__title {
-          .case__heading {
-            color: $grey;
-            font-size: 16px;
-            font-family: $fontSem;
-            margin: 0;
-            margin-bottom: 10px;
-          }
-          .case__text {
-            line-height: $lh;
-            font-size: 14px;
-            color: rgba($grey, 0.8);
-            font-family: $fontReg;
-            margin: 0;
-          }
-        }
-      }
+      
     }
   }
 
   .skills__section {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    border: 1px solid $grey;
-    grid-gap: 1px;
-    background-color: $grey;
-    &__item {
-      width: -webkit-fill-available;
-      height: 150px;
-      background-color: $dark;
-      display: flex;
-      &__img {
-        display: block;
-        margin: auto;
-        filter: grayscale(100%);
-        transition: $tr;
-      }
-      &__img:hover {
-        filter: inherit;
-      }
-    }
   }
   .price__section {
-    display: flex;
-    flex-direction: column;
     gap: 30px;
-    &__item:not(:last-child) {
-      border-bottom: 1px solid $grey;
-    }
     &__heading {
-      display: flex;
       flex-direction: column;
-      position: relative;
-      justify-content: space-between;
-      gap: 20px;
-      margin-top: 68px;
+
       padding-bottom: 20px;
-      border-bottom: 1px solid $grey;
       &__title {
         margin: 0;
         font-family: $fontBold;
@@ -1273,61 +1054,27 @@ section {
       gap: 10px;
       padding-bottom: 20px;
       &__heading {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        line-height: $lh;
-
         &__title {
-          color: $grey;
           font-size: 16px;
-          font-style: $fontReg;
-          margin: 0;
         }
         &__text {
-          color: rgba($grey, 0.8);
-          margin: 0;
           font-size: 10px;
-          font-family: $fontMed;
         }
       }
       &__content {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
         &__title {
-          margin: 0;
           font-size: 12px;
-          font-family: $fontBold;
-          color: $grey;
         }
         .content__list {
-          padding-left: 18px;
           .content__item {
-            margin-left: 0;
-            line-height: 200%;
             font-size: 12px;
-            font-family: $fontReg;
-            color: rgba($grey, 0.8);
           }
         }
         &__price {
-          font-family: $fontBold;
           font-size: 22px;
-          line-height: $lh;
-          color: $grey;
-          position: relative;
           &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            transform: translate(-50%, -10%);
             width: 40px;
             height: 40px;
-            background-color: $red;
-            border-radius: 50%;
-            z-index: -1;
           }
         }
       }
@@ -1335,83 +1082,27 @@ section {
   }
   .feedback__section {
     &__heading {
-      display: flex;
       flex-direction: column;
-      justify-content: space-between;
-      position: relative;
-      padding-bottom: 60px;
-      margin-bottom: 60px;
-      border-bottom: 1px solid $grey;
       &__title {
         font-size: 26px;
-        font-family: $fontBold;
-        line-height: 150%;
-        text-transform: uppercase;
-        color: $grey;
       }
       &__text {
         max-width: inherit;
-        font-size: 16spx;
-        font-family: $fontReg;
-        line-height: 150%;
-        color: $grey;
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translate(-50%, -10%);
-        width: 328px;
-        height: 300px;
-        background-image: url(../images/feedback__background.svg);
-        background-repeat: no-repeat;
-        z-index: -1;
+        font-size: 16px;
       }
     }
     &__content {
-      display: flex;
-      flex-direction: column;
-      align-items: end;
-      justify-content: end;
       gap: 20px;
       &__container {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
         max-width: inherit;
-        width: 100%;
-      }
-      &__label {
-        font-size: 12px;
-        font-family: $fontReg;
-        line-height: 150%;
-        color: $grey;
-      }
-      &__input {
-        height: 45px;
-        background-color: rgba($grey, 0.1);
-        border: none;
-        padding: 10px 20px;
       }
       .feedback__btn {
-        border: none;
         margin-top: 20px;
         margin-bottom: 20px;
         height: 65px;
         padding: 10px;
-        text-align: center;
-        background-color: $red;
         max-width: inherit;
-        width: 100%;
-        color: $grey;
         font-size: 16px;
-        line-height: $lh;
-        font-family: $fontBold;
-        transition: $tr;
-        &:hover {
-          background-color: #ea0e00;
-        }
       }
     }
     &__contacts {
@@ -1436,32 +1127,8 @@ section {
   }
 
   .footer {
-    max-width: 1140px;
-    width: 100%;
-    margin-top: 130px;
-    border-top: 1px solid $grey;
-    padding-top: 60px;
-    display: grid;
-    justify-items: center;
     gap: 20px;
     grid-template-columns: repeat(1, 1fr);
-    &__hrefs,
-    &__contacts {
-      width: 100%;
-      display: flex;
-      &__item,
-      &__phone,
-      &__mail {
-        text-decoration: none;
-        color: $grey;
-        line-height: 150%;
-        transition: $tr;
-        width: auto;
-        &:hover {
-          color: $red;
-        }
-      }
-    }
 
     &__hrefs {
       gap: 15px;
@@ -1474,11 +1141,7 @@ section {
     }
     &__confidentional,
     &__author {
-      width: 100%;
       font-size: 10px;
-      font-family: $fontReg;
-      line-height: $lh;
-      color: rgba($grey, 0.3);
     }
     &__confidentional {
       text-align: center;
