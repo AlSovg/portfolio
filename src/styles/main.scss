@@ -50,30 +50,322 @@ button {
   height: 1px;
   width: 100%;
 }
-
-.header {
-  position: fixed;
-  top: 0;
-  z-index: 1;
-  width: 100%;
-  background-color: $dark;
-  
-  &__container {
-    max-width: 1140px;
+@media screen and (min-width: 720px) {
+  .header {
+    position: fixed;
+    top: 0;
     width: 100%;
-    height: 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    font-family: $fontReg;
-    color: $grey;
-    padding: 10px 0;
-    margin: auto;
+    &__container {
+      max-width: 1140px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    &__hrefs,
+    &__contacts {
+      display: flex;
+      &__item,
+      &__phone,
+      &__mail {
+        text-decoration: none;
+        color: $grey;
+        line-height: 150%;
+        transition: $tr;
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+    &__hrefs {
+      gap: 28px;
+    }
+    &__contacts {
+      gap: 13px;
+    }
+  }
+  section {
+    max-width: 1140px;
+    margin-top: 62px;
+  }
+  .main__section {
+    &__title {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin: 120px 0;
+      color: $grey;
+      .fio {
+        height: 42px;
+        font-size: 28px;
+      }
+      .job {
+        height: 90px;
+        letter-spacing: 3%;
+        font-size: 74px;
+      }
+    }
+    &__circle {
+      position: absolute;
+      left: 0;
+      top: 375px;
+      transform: translateX(-50%);
+      width: 253px;
+      height: 253px;
+      z-index: -1;
+    }
+    &__small-circle {
+      position: absolute;
+      right: 0;
+      bottom: 152px;
+      transform: translateX(-50%);
+      width: 106px;
+      height: 106px;
+      z-index: -1;
+    }
+    &__triangle {
+      position: absolute;
+      top: 413px;
+      left: 0;
+      transform: translateX(-200%);
+      width: 76px;
+    }
+    &__contacts {
+      margin-bottom: 42px;
+    }
+    &__socials {
+      gap: 24px;
+    }
+    &__skills {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 87px;
+      height: 81px;
+      &__item {
+        height: 81px;
+        .skill__name {
+          font-size: 16px;
+        }
+        .skill__title {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .title__section {
+    gap: 60px;
+    margin-bottom: 180px;
+    &__content {
+      .self-presentation-details {
+        max-width: 50%;
+      }
+    }
+    &__advantage {
+      display: grid;
+      gap: 70px 60px;
+      max-width: 50%;
+      width: 100%;
+      grid-template-columns: repeat(2, 1fr);
+      &__item {
+        .advantage__name {
+          margin: 0;
+          color: $grey;
+          font-family: $fontBold;
+          line-height: 150%;
+          font-size: 16px;
+          margin-bottom: 20px;
+        }
+        .advantage__title {
+          margin: 0;
+          color: rgba($grey, 0.8);
+          font-size: 14px;
+          font-family: $fontReg;
+          line-height: 150%;
+        }
+      }
+    }
+  }
+  .stages__section {
+    &__item {
+      .stage__number,
+      .stage__name {
+        color: $grey;
+        line-height: 150%;
+        font-size: 28px;
+        font-family: $fontReg;
+        text-align: start;
+      }
+      .stage__number {
+        width: 30px;
+      }
+      .stage__name {
+        width: 50%;
+      }
+      .stage__title {
+        font-size: 16px;
+        transform: translateY(20%);
+      }
+    }
   }
 
+  .cases__section {
+    padding-top: 90px;
+    &__heading {
+      font-size: 74px;
+      height: 90px;
+      margin-bottom: 145px;
+    }
+
+    &__item {
+      padding: 60px 0;
+      align-items: center;
+      .case__content {
+        gap: 40px;
+        &__name {
+          font-size: 28px;
+        }
+        &__options {
+          font-size: 16px;
+        }
+        &__time {
+          font-size: 16px;
+        }
+      }
+      .case__image {
+        width: 560px;
+        height: 315px;
+      }
+    }
+    .circle__background {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+      width: 465px;
+      height: 465px;
+      background-color: $red;
+      border-radius: 50%;
+    }
+  }
+  .benefits__section {
+    &__heading {
+      font-size: 28px;
+    }
+    &__cases {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .skills__section {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .price__section {
+    gap: 60px;
+    &__heading {
+      padding-bottom: 80px;
+      &__title {
+        font-size: 28px;
+      }
+      &__text {
+        max-width: 50%;
+        font-size: 28px;
+      }
+    }
+    &__item {
+      gap: 200px;
+      padding-bottom: 50px;
+      &__heading {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        line-height: $lh;
+
+        &__title {
+          font-size: 28px;
+        }
+        &__text {
+          font-size: 16px;
+        }
+      }
+      &__content {
+        &__title {
+          font-size: 16px;
+        }
+        .content__list {
+          .content__item {
+            font-size: 16px;
+          }
+        }
+        &__price {
+          font-size: 42px;
+          &::after {
+            width: 90px;
+            height: 90px;
+          }
+        }
+      }
+    }
+  }
+  .feedback__section {
+    &__heading {
+      &__title {
+        font-size: 28px;
+      }
+      &__text {
+        max-width: 50%;
+        font-size: 28px;
+      }
+    }
+    &__content {
+      &__container {
+        max-width: 50%;
+      }
+      .feedback__btn {
+        margin-top: 20px;
+        height: 65px;
+        padding: 10px;
+        max-width: 50%;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .footer {
+    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    &__hrefs {
+      gap: 28px;
+    }
+    &__contacts {
+      justify-content: end;
+      gap: 13px;
+    }
+    &__confidentional,
+    &__author {
+      font-size: 12px;
+    }
+    &__confidentional {
+      text-align: start;
+    }
+    &__author {
+      text-align: end;
+    }
+  }
+}
+
+.header {
+  z-index: 1;
+  background-color: $dark;
+  &__container {
+    width: 100%;
+    margin: auto;
+    padding: 10px 0;
+    font-family: $fontReg;
+    color: $grey;
+    height: 24px;
+  }
   &__hrefs,
   &__contacts {
-    display: flex;
     &__item,
     &__phone,
     &__mail {
@@ -81,84 +373,40 @@ button {
       color: $grey;
       line-height: 150%;
       transition: $tr;
+      white-space: nowrap;
       &:hover {
         color: $red;
       }
     }
   }
-
-  &__hrefs {
-    gap: 28px;
-  }
-  &__contacts {
-    gap: 13px;
-  }
 }
 
 section {
-  max-width: 1140px;
   width: 100%;
-  margin-top: 62px;
 }
 
 .main__section {
   position: relative;
   &__title {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    margin: 120px 0;
     color: $grey;
     .fio {
       margin: 0;
-      height: 42px;
-      font-size: 28px;
       font-family: $fontReg;
       line-height: 150%;
     }
     .job {
       margin: 0;
-      height: 90px;
-      letter-spacing: 3%;
-      font-size: 74px;
       font-family: $fontBold;
       text-transform: uppercase;
     }
   }
-  &__circle {
-    position: absolute;
-    left: 0;
-    top: 375px;
-    transform: translateX(-50%);
-    width: 253px;
-    height: 253px;
-    z-index: -1;
-  }
-  &__small-circle {
-    position: absolute;
-    right: 0;
-    bottom: 152px;
-    transform: translateX(-50%);
-    width: 106px;
-    height: 106px;
-    z-index: -1;
-  }
-  &__triangle {
-    position: absolute;
-    top: 413px;
-    left: 0;
-    transform: translateX(-200%);
-    width: 76px;
-  }
   &__contacts {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 42px;
   }
 
   &__socials {
     display: flex;
-    gap: 24px;
     &__item {
       text-decoration: none;
       color: $grey;
@@ -172,24 +420,18 @@ section {
   &__skills {
     padding-top: 62px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 87px;
     border-top: 1px solid $white;
-    height: 81px;
     &__item {
-      height: 81px;
       .skill__name {
         color: $white;
         font-family: $fontBold;
         text-transform: uppercase;
         margin: 0 0 15px;
-        font-size: 16px;
       }
       .skill__title {
         margin: 0;
         color: $grey;
         font-family: $fontReg;
-        font-size: 14px;
       }
     }
   }
@@ -199,8 +441,6 @@ section {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 60px;
-  margin-bottom: 180px;
   &__content {
     display: flex;
     justify-content: space-between;
@@ -216,34 +456,13 @@ section {
       color: rgba($grey, 0.8);
       font-size: 28px;
       font-family: $fontReg;
-      max-width: 50%;
       width: 100%;
       line-height: 150%;
     }
   }
   &__advantage {
-    display: grid;
     gap: 70px 60px;
     max-width: 50%;
-    width: 100%;
-    grid-template-columns: repeat(2, 1fr);
-    &__item {
-      .advantage__name {
-        margin: 0;
-        color: $grey;
-        font-family: $fontBold;
-        line-height: 150%;
-        font-size: 16px;
-        margin-bottom: 20px;
-      }
-      .advantage__title {
-        margin: 0;
-        color: rgba($grey, 0.8);
-        font-size: 14px;
-        font-family: $fontReg;
-        line-height: 150%;
-      }
-    }
   }
 }
 
@@ -257,7 +476,6 @@ section {
     gap: 40px;
     padding: 30px 0;
     text-align: end;
-    .stage__number,
     .stage__name {
       color: $grey;
       line-height: 150%;
@@ -265,18 +483,10 @@ section {
       font-family: $fontReg;
       text-align: start;
     }
-    .stage__number {
-      width: 30px;
-    }
-    .stage__name {
-      width: 50%;
-    }
     .stage__title {
       color: rgba($grey, 0.8);
       line-height: 150%;
-      font-size: 16px;
       font-family: $fontReg;
-      transform: translateY(20%);
       flex-grow: 1;
       width: 50%;
       text-align: start;
@@ -285,38 +495,28 @@ section {
 }
 .cases__section {
   position: relative;
-  padding-top: 90px;
   &__heading {
-    font-size: 74px;
     font-family: $fontBold;
     color: $grey;
     text-transform: uppercase;
-    height: 90px;
-    margin-bottom: 145px;
   }
-
   &__item {
     display: flex;
     justify-content: space-between;
-    padding: 60px 0;
-    align-items: center;
     border-bottom: 1px solid $grey;
     .case__content {
       color: rgba($grey, 0.8);
       display: flex;
       flex-direction: column;
-      gap: 40px;
       &__name {
         color: $grey;
         line-height: $lh;
-        font-size: 28px;
         font-family: $fontBold;
       }
       &__options {
         list-style-type: none;
         margin: 0;
         padding: 0;
-        font-size: 16px;
         font-family: $fontReg;
         &__item {
           &::before {
@@ -328,13 +528,8 @@ section {
         }
       }
       &__time {
-        font-size: 16px;
         font-family: $fontBold;
       }
-    }
-    .case__image {
-      width: 560px;
-      height: 315px;
     }
   }
 
@@ -349,23 +544,11 @@ section {
     transform: translateX(-50%);
     z-index: -1;
   }
-  .circle__background {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: -1;
-    width: 465px;
-    height: 465px;
-    background-color: $red;
-    border-radius: 50%;
-  }
 }
 
 .benefits__section {
   &__heading {
     font-family: $fontReg;
-    font-size: 28px;
     line-height: $lh;
     color: $grey;
     padding-bottom: 60px;
@@ -374,7 +557,6 @@ section {
   }
   &__cases {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 60px;
     align-items: center;
     justify-items: center;
@@ -410,7 +592,6 @@ section {
 
 .skills__section {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   border: 1px solid $grey;
   grid-gap: 1px;
   background-color: $grey;
@@ -433,7 +614,6 @@ section {
 .price__section {
   display: flex;
   flex-direction: column;
-  gap: 60px;
   &__item:not(:last-child) {
     border-bottom: 1px solid $grey;
   }
@@ -442,20 +622,16 @@ section {
     position: relative;
     justify-content: space-between;
     margin-top: 68px;
-    padding-bottom: 80px;
     &__title {
       margin: 0;
       font-family: $fontBold;
-      font-size: 28px;
       color: $grey;
       line-height: $lh;
       text-transform: uppercase;
     }
     &__text {
       margin: 0;
-      max-width: 50%;
       font-family: $fontReg;
-      font-size: 28px;
       color: rgba($grey, 0.8);
       line-height: $lh;
     }
@@ -473,24 +649,15 @@ section {
   }
   &__item {
     display: flex;
-    gap: 200px;
-    padding-bottom: 50px;
     &__heading {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      line-height: $lh;
-
       &__title {
         color: $grey;
-        font-size: 28px;
-        font-style: $fontReg;
+        font-family: $fontReg;
         margin: 0;
       }
       &__text {
         color: rgba($grey, 0.8);
         margin: 0;
-        font-size: 16px;
         font-family: $fontMed;
       }
     }
@@ -500,7 +667,6 @@ section {
       gap: 20px;
       &__title {
         margin: 0;
-        font-size: 16px;
         font-family: $fontBold;
         color: $grey;
       }
@@ -509,14 +675,12 @@ section {
         .content__item {
           margin-left: 0;
           line-height: 200%;
-          font-size: 16px;
           font-family: $fontReg;
           color: rgba($grey, 0.8);
         }
       }
       &__price {
         font-family: $fontBold;
-        font-size: 42px;
         line-height: $lh;
         color: $grey;
         position: relative;
@@ -526,8 +690,6 @@ section {
           top: 0;
           left: 0;
           transform: translate(-50%, -10%);
-          width: 90px;
-          height: 90px;
           background-color: $red;
           border-radius: 50%;
           z-index: -1;
@@ -545,15 +707,12 @@ section {
     margin-bottom: 60px;
     border-bottom: 1px solid $grey;
     &__title {
-      font-size: 28px;
       font-family: $fontBold;
       line-height: 150%;
       text-transform: uppercase;
       color: $grey;
     }
     &__text {
-      max-width: 50%;
-      font-size: 28px;
       font-family: $fontReg;
       line-height: 150%;
       color: $grey;
@@ -581,7 +740,6 @@ section {
       display: flex;
       flex-direction: column;
       gap: 10px;
-      max-width: 50%;
       width: 100%;
     }
     &__label {
@@ -616,15 +774,10 @@ section {
     }
     .feedback__btn {
       border: none;
-      margin-top: 20px;
-      height: 65px;
-      padding: 10px;
       text-align: center;
       background-color: $red;
-      max-width: 50%;
       width: 100%;
       color: $grey;
-      font-size: 16px;
       line-height: $lh;
       font-family: $fontBold;
       transition: $tr;
@@ -662,8 +815,6 @@ section {
   padding-top: 60px;
   display: grid;
   justify-items: center;
-  gap: 40px;
-  grid-template-columns: repeat(2, 1fr);
   &__hrefs,
   &__contacts {
     width: 100%;
@@ -680,27 +831,12 @@ section {
       }
     }
   }
-
-  &__hrefs {
-    gap: 28px;
-  }
-  &__contacts {
-    justify-content: end;
-    gap: 13px;
-  }
   &__confidentional,
   &__author {
     width: 100%;
-    font-size: 12px;
     font-family: $fontReg;
     line-height: $lh;
     color: rgba($grey, 0.3);
-  }
-  &__confidentional {
-    text-align: start;
-  }
-  &__author {
-    text-align: end;
   }
 }
 
