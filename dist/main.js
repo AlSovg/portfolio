@@ -1,3 +1,3 @@
-document.getElementById('theme-toggle').addEventListener('click', function () {
-    document.body.classList.toggle('dark-theme');
-  });
+document.getElementById("themeSwitch").addEventListener("change", function () {
+  document.body.classList.toggle("dark-theme");
+});
